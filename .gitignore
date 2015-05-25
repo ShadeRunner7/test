@@ -1,13 +1,13 @@
 # =============== #
 # Unity generated #
 # =============== #
-folder/Temp/
-folder/Library/
+test/Temp/
+test/Library/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-folder/ExportedObj/
+test/ExportedObj/
 obj/
 *.svd
 *.userprefs
