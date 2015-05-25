@@ -7,7 +7,7 @@ test/Library/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-test/ExportedObj/
+/ExportedObj/
 obj/
 *.svd
 *.userprefs
