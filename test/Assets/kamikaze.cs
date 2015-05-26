@@ -41,8 +41,8 @@ public class kamikaze : MonoBehaviour {
 			other.SendMessageUpwards ("takeDamage", damage, SendMessageOptions.DontRequireReceiver);
 			Destroy (gameObject);
 		}
-		if (other.collider.tag == "Player") {
-			Physics2D.IgnoreCollision(other.collider, gameObject.collider2D);
+		if (other.tag == "Player") {
+			Physics2D.IgnoreCollision(other.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
 		}
 	}
 }

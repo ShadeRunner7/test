@@ -6,8 +6,7 @@ public class Ship : MonoBehaviour {
 	public Rigidbody2D rb;
 	
 	Transform gunLeft,
-	 		  gunRight,
-			  kkSpawn;
+			  gunRight;
 
 	bool up = false,
 	     down = false,
@@ -25,7 +24,6 @@ public class Ship : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		gunLeft = transform.Find ("gunLeft");
 		gunRight = transform.Find ("gunRight");
-		kkSpawn = transform.Find ("meleeSpawn");
 	}
 	
 	// Update is called once per frame
