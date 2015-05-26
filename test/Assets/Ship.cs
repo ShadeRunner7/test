@@ -69,12 +69,14 @@ public class Ship : MonoBehaviour {
 				GameObject tmp = Instantiate (Resources.Load ("beam"), gunLeft.position, gunLeft.rotation) as GameObject;
 				beam tmp2 = tmp.GetComponent<beam>();
 				tmp2.taga = transform.tag;
+				tmp2.damage = 10;
 				shootside = false;
 				timer = Time.time + 0.4;
 			} else {
 				GameObject tmp = Instantiate (Resources.Load ("beam"), gunRight.position, gunRight.rotation) as GameObject;
 				beam tmp2 = tmp.GetComponent<beam>();
 				tmp2.taga = transform.tag;
+				tmp2.damage = 10;
 				shootside = true;
 				timer = Time.time + 0.4;
 			}

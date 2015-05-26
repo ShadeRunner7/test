@@ -6,7 +6,7 @@ public class beam : MonoBehaviour {
 	Rigidbody2D rb;
 
 	public int speed = 20,
-			   damage = 10;
+			   damage;
 
 	public string taga;
 
@@ -16,7 +16,7 @@ public class beam : MonoBehaviour {
 		Destroy (gameObject, 6);
 	}
 
-	void onTriggerEnter2D(Collider2D other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log ("works");
 		other.SendMessageUpwards ("takeDamage", damage, SendMessageOptions.DontRequireReceiver);
 	}
