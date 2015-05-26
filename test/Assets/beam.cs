@@ -6,19 +6,22 @@ public class beam : MonoBehaviour {
 	Rigidbody2D rb;
 
 	public int speed = 20,
-			   damage;
+			   damage,
+			   TTL = 6;
 
 	public string taga;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		Destroy (gameObject, 6);
+		Destroy (gameObject, TTL);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("works");
-		other.SendMessageUpwards ("takeDamage", damage, SendMessageOptions.DontRequireReceiver);
+		if (other.tag == "enemy") {
+			other.SendMessageUpwards ("takeDamage", damage, SendMessageOptions.DontRequireReceiver);
+			Destroy (gameObject);
+		}
 	}
 	
 	// Update is called once per frame
